@@ -4,10 +4,10 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import ticket.booking.entities.Ticket;
-import ticket.booking.entities.Train;
-import ticket.booking.entities.User;
-import ticket.booking.util.UserServiceUtil;
+import org.ticketbooking.entities.Ticket;
+import org.ticketbooking.entities.Train;
+import org.ticketbooking.entities.User;
+import org.ticketbooking.util.UserServiceUtil;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;

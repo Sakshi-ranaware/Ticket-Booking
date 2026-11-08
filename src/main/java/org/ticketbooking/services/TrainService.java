@@ -2,7 +2,7 @@ package org.ticketbooking.services;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ticket.booking.entities.Train;
+import org.ticketbooking.entities.Train;
 
 import java.io.File;
 import java.io.IOException;
