@@ -1,4 +1,4 @@
-package ticket.booking.entities;
+package org.ticketbooking.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
