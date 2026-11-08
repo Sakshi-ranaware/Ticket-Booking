@@ -103,6 +103,8 @@ public class Main {
                 default:
                     break;
             }
+            System.out.println("Current Working Directory: " + new java.io.File(".").getAbsolutePath());
+
         }
     }
 }

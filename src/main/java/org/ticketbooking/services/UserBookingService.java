@@ -22,7 +22,8 @@ public class UserBookingService{
 
     private User user;
 
-    private final String USER_FILE_PATH = "app/src/main/java/ticket/booking/localDb/users.json";
+    private final String USER_FILE_PATH =
+            "src/main/java/org/ticketbooking/localDb/users.json";
 
     public UserBookingService(User user) throws IOException {
         this.user = user;
@@ -34,7 +35,22 @@ public class UserBookingService{
     }
 
     private void loadUserListFromFile() throws IOException {
-        userList = objectMapper.readValue(new File(USER_FILE_PATH), new TypeReference<List<User>>() {});
+
+        File usersFile = new File(USER_FILE_PATH);
+
+        if (!usersFile.exists()) {
+            usersFile.getParentFile().mkdirs();
+            objectMapper.writeValue(usersFile, new ArrayList<User>());
+        }
+
+        userList = objectMapper.readValue(
+                usersFile,
+                new TypeReference<List<User>>() {}
+        );
+
+        if (userList == null) {
+            userList = new ArrayList<>();
+        }
     }
 
     public Boolean loginUser(){
