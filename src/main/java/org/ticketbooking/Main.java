@@ -34,7 +34,7 @@ public class Main {
             System.out.println("4. Search Trains");
             System.out.println("5. Book a Seat");
             System.out.println("6. Cancel my Booking");
-            System.out.println("7. Exit the App");
+            System.out.println("7. Exit the App...");
             option = scanner.nextInt();
             Train trainSelectedForBooking = new Train();
             switch (option){
